@@ -53,9 +53,11 @@ int * getArray(){
 int findK(int prime, int * set, int length ){ 
 
 	int k; 
-	for(k=0;!isK(k, prime, set, length);k++){
+	for(k=0;k <= length && !isK(k, prime, set, length);k++){
 		//---------------printf("maybe %d ...\n",k);
 	}
+	if (k == length)
+		return -1;
 	return k;
 }
 
